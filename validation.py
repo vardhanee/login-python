@@ -60,9 +60,8 @@ def login():
     password_valid, password_error = is_valid_password(password)
 
     if username_valid and password_valid:
-        # In a real application, you would check against a database here
-        # For demonstration purposes, let's use hardcoded credentials
-        if username == "testuser" and password == "SecurePassword123!":
+        #  database here
+         if username == "testuser" and password == "SecurePassword123!":
             return jsonify({'success': True, 'message': 'Login successful!'}), 200
         else:
             return jsonify({'success': False, 'message': 'Invalid username or password.'}), 401
